@@ -1,6 +1,6 @@
 {
   "name": "iced-stream",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Various simple subclasses for streams with IcedCoffeeScript",
   "main": "lib/main.js",
   "scripts": {
