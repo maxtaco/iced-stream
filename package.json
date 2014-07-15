@@ -1,0 +1,29 @@
+{
+  "name": "iced-stream",
+  "version": "0.0.0",
+  "description": "Various simple subclasses for streams with IcedCoffeeScript",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxtaco/iced-stream"
+  },
+  "keywords": [
+    "IcedCoffeeScript",
+    "streams"
+  ],
+  "author": "Maxwell Krohn",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/maxtaco/iced-stream/issues"
+  },
+  "homepage": "https://github.com/maxtaco/iced-stream",
+  "devDependencies": {
+    "iced-coffee-script": "^1.7.1-f"
+  },
+  "dependencies": {
+    "iced-runtime": "^1.0.1"
+  }
+}
