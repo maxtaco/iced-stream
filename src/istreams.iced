@@ -20,7 +20,6 @@ class Base
       else    await s2.write buf, defer err
     cb? null
 
-
 #=========================================================
 
 class MyBuffer
@@ -58,4 +57,3 @@ class MyBuffer
       @_writers.pop()()
     cb ret
 
-#=========================================================
