@@ -20,6 +20,26 @@ exports.Faucet = class Faucet extends stream.Readable
 
 #=======================================================================================
 
+exports.SlowFaucet = class SlowFaucet extends stream.Readable
+
+  constructor :({@buf, @blocksize, @wait_msec}) ->
+    super()
+    @_i = 0
+
+  _read : (n) ->
+    buf = null
+    if not @buf? then # noop
+    else if not @blocksize?
+      buf = @buf
+      @buf = null
+    else if @_i < @buf.length
+      end = @_i + @blocksize
+      buf = @buf[@_i...end]
+      @_i = end
+    @push buf
+
+#=======================================================================================
+
 # Take a stream, and cb when it's fully drained.  Callback with the buffer of what was
 # in the stream.
 exports.faucet = faucet = ({buf, stream}, cb) ->
